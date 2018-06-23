@@ -1,0 +1,13 @@
+name: changelog
+version: 0.1.0
+
+authors:
+  - Vlad Faust <mail@vladfaust.com>
+
+targets:
+  changelog:
+    main: src/changelog.cr
+
+crystal: 0.25.0
+
+license: MIT
