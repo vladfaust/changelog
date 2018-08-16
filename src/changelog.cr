@@ -97,8 +97,10 @@ end
 
 log_type("feat", "New Features")
 log_type("fix", "Bug Fixes")
+log_type("optimize", "Optimizations")
+log_type("deps", "Dependency Updates")
 log_type("docs", "Documentation")
-log_type("chores", "Chores")
-log_type("refactor", "Refactor")
+log_type("refactor", "Refactoring")
+log_type("chore", "Chores")
 
 puts result.chomp
