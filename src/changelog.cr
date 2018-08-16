@@ -67,7 +67,7 @@ macro log_type(_type, name)
 end
 
 macro log_commit(commit)
-  result += "* #{commit.hash}#{" **breaking**" if commit.breaking} #{commit.subject}"
+  result += "* #{commit.hash}#{" ⚠️ **BREAKING**" if commit.breaking} #{commit.subject}"
 
   if commit.closed_issues.any? || commit.fixed_issues.any? || commit.resolved_issues.any?
     result += " ("
