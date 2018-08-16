@@ -51,7 +51,7 @@ end
 
 commits.each do |t, c|
   c.sort! { |a, b| a.time <=> b.time }
-  c.sort! { |a, b| a.breaking && b.breaking ? 0 : (a.breaking ? 1 : -1) }
+  c.sort! { |a, b| a.breaking && b.breaking ? 0 : (a.breaking ? -1 : 1) }
 end
 
 result = ""
