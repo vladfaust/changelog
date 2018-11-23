@@ -34,7 +34,7 @@ log.each_line do |line|
   case line
   when /^{{(?<hash>\w{7})}}/
     if /^{{(?<hash>\w{7})}} (?<timestamp>\d+) (?<type>\w+)(?:\((?<scope>\w+)\))?(?:\: (?<subject>.+))?$/ =~ line
-      current_commit = Commit.new($~["hash"], Time.epoch($~["timestamp"].to_i64), $~["type"], $~["scope"]?, $~["subject"]?, nil)
+      current_commit = Commit.new($~["hash"], Time.unix($~["timestamp"].to_i64), $~["type"], $~["scope"]?, $~["subject"]?, nil)
 
       (commits[current_commit.type] ||= [] of Commit) << current_commit
     end
